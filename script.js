@@ -123,10 +123,11 @@ counters.forEach((c) => countIO.observe(c));
 // ---------- Typed role line ----------
 const typed = document.getElementById('typed');
 if (typed && !reduceMotion) {
-    const roles = ['Freelance Engineer', 'Full-Stack Developer', 'Automation Builder', 'WordPress Specialist'];
     let r = 0, i = 0, deleting = false;
+    window.addEventListener('langchange', () => { r = 0; i = 0; deleting = false; });
     const step = () => {
-        const word = roles[r];
+        const roles = window.__roles || ['Freelance Engineer'];
+        const word = roles[r % roles.length];
         typed.textContent = word.slice(0, i);
         let delay = deleting ? 35 : 80;
         if (!deleting && i === word.length) { deleting = true; delay = 1800; }
