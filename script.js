@@ -48,7 +48,7 @@ onScroll();
 // ---------- Scroll reveal (staggered) ----------
 const revealTargets = document.querySelectorAll(
     '.section-title, .about-image, .about-text > p, .stat-item, .skill-card, .project-card, ' +
-    '.pricing-service-header, .pricing-tier, .custom-service-item, .custom-services-note, ' +
+    '.pricing-tier, .custom-title, .custom-chip, ' +
     '.pricing-cta, .contact-info, .contact-form'
 );
 const io = new IntersectionObserver((entries) => {
