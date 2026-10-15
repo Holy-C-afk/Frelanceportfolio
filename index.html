@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tachfine El Farouki - Freelancer Portfolio</title>
     <meta name="description" content="Tachfine El Farouki — freelance engineer building websites, apps and automations. Based in Morocco.">
-    <meta name="theme-color" content="#eef1f3">
+    <meta name="theme-color" content="#f2f7f9">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
 
     <nav class="navbar">
         <div class="container">
-            <a href="#home" class="nav-brand">tachfine<span class="brand-slash">/</span>dev</a>
+            <a href="#home" class="nav-brand"><span class="brand-mark" aria-hidden="true"></span>tachfine<span class="brand-slash">/</span>dev</a>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -40,27 +40,38 @@
                 <p class="hero-description">I create innovative solutions and technical systems that help businesses grow and automate their processes.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-link">Get In Touch <span class="arrow" aria-hidden="true">→</span></a>
+                    <a href="#contact" class="btn btn-soft">Get In Touch <span class="arrow" aria-hidden="true">→</span></a>
                 </div>
             </div>
-            <figure class="hero-image">
-                <img src="image.png" alt="Tachfine El Farouki" class="profile-img" width="480" height="600">
-            </figure>
+            <div class="hero-visual">
+                <span class="blob blob-1" aria-hidden="true"></span>
+                <span class="blob blob-2" aria-hidden="true"></span>
+                <figure class="hero-image">
+                    <img src="image.png" alt="Tachfine El Farouki" class="profile-img" width="480" height="600">
+                </figure>
+                <span class="chip chip-1" aria-hidden="true">WordPress</span>
+                <span class="chip chip-2" aria-hidden="true">n8n</span>
+                <span class="chip chip-3" aria-hidden="true">React</span>
+            </div>
         </div>
     </section>
 
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track"><span>WordPress</span><span>React</span><span>Node.js</span><span>n8n</span><span>Vue.js</span><span>PHP</span><span>Python</span><span>Flutter</span><span>AI Automation</span><span>React Native</span><span>C#</span><span>Java</span><span>WordPress</span><span>React</span><span>Node.js</span><span>n8n</span><span>Vue.js</span><span>PHP</span><span>Python</span><span>Flutter</span><span>AI Automation</span><span>React Native</span><span>C#</span><span>Java</span></div>
+    </div>
+
     <section id="about" class="about">
         <div class="container">
-            <header class="sec-head"><span class="idx">01</span><h2 class="section-title">About Me</h2></header>
+            <header class="sec-head"><span class="pill">About</span><h2 class="section-title">About Me</h2></header>
             <div class="about-content">
                 <div class="about-text">
                     <p class="lead">I'm a passionate freelance engineer with years of experience creating innovative technical solutions. I help clients bring their ideas to life through clean code, automation, and efficient system design.</p>
                     <p>My approach combines technical expertise with problem-solving skills to deliver solutions that not only meet requirements but also perform exceptionally well.</p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-item"><h3>50+</h3><p>Projects Completed</p></div>
-                    <div class="stat-item"><h3>30+</h3><p>Happy Clients</p></div>
-                    <div class="stat-item"><h3>5+</h3><p>Years Experience</p></div>
+                    <div class="stat-item t-mint"><h3>50+</h3><p>Projects Completed</p></div>
+                    <div class="stat-item t-sky"><h3>30+</h3><p>Happy Clients</p></div>
+                    <div class="stat-item t-lilac"><h3>5+</h3><p>Years Experience</p></div>
                 </div>
             </div>
         </div>
@@ -68,26 +79,26 @@
 
     <section id="skills" class="skills">
         <div class="container">
-            <header class="sec-head"><span class="idx">02</span><h2 class="section-title">Skills</h2></header>
+            <header class="sec-head"><span class="pill">Skills</span><h2 class="section-title">Skills</h2></header>
             <div class="skills-grid">
-                <div class="skill-card"><span class="idx">01</span><h3>Frontend Development</h3><p>HTML, CSS, JavaScript, React, Vue.js</p></div>
-                <div class="skill-card"><span class="idx">02</span><h3>Backend Development</h3><p>Node.js, PHP, Python, Java, C#, Database Design</p></div>
-                <div class="skill-card"><span class="idx">03</span><h3>WordPress Development</h3><p>WordPress, PHP, Theme Development, Plugin Development</p></div>
-                <div class="skill-card"><span class="idx">04</span><h3>Mobile App Development</h3><p>iOS, Android, Cross-platform, React Native, Flutter</p></div>
-                <div class="skill-card"><span class="idx">05</span><h3>Software Development</h3><p>Desktop Applications, Custom Software, C#, API Development</p></div>
-                <div class="skill-card"><span class="idx">06</span><h3>Automation &amp; Chatbots</h3><p>n8n, Chatbots, Business Process Automation, AI Integration</p></div>
+                <div class="skill-card"><h3>Frontend Development</h3><p>HTML, CSS, JavaScript, React, Vue.js</p></div>
+                <div class="skill-card"><h3>Backend Development</h3><p>Node.js, PHP, Python, Java, C#, Database Design</p></div>
+                <div class="skill-card"><h3>WordPress Development</h3><p>WordPress, PHP, Theme Development, Plugin Development</p></div>
+                <div class="skill-card"><h3>Mobile App Development</h3><p>iOS, Android, Cross-platform, React Native, Flutter</p></div>
+                <div class="skill-card"><h3>Software Development</h3><p>Desktop Applications, Custom Software, C#, API Development</p></div>
+                <div class="skill-card"><h3>Automation &amp; Chatbots</h3><p>n8n, Chatbots, Business Process Automation, AI Integration</p></div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="projects">
         <div class="container">
-            <header class="sec-head"><span class="idx">03</span><h2 class="section-title">My Projects</h2></header>
+            <header class="sec-head"><span class="pill">Projects</span><h2 class="section-title">My Projects</h2></header>
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/ecommerce.svg" alt="E-Commerce Website preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">01</span><h3>E-Commerce Website</h3></div>
+                        <h3>E-Commerce Website</h3>
                         <p>A fully functional e-commerce platform with shopping cart, payment integration, and admin dashboard.</p>
                         <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Node.js</span></div>
                     </div>
@@ -95,7 +106,7 @@
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/blog.svg" alt="Blog Platform preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">02</span><h3>Blog Platform</h3></div>
+                        <h3>Blog Platform</h3>
                         <p>A modern blog platform with rich text editor, categories, tags, and comment system.</p>
                         <div class="project-tech"><span>React</span><span>CSS</span><span>Node.js</span><span>MongoDB</span></div>
                     </div>
@@ -103,7 +114,7 @@
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/dashboard.svg" alt="Analytics Dashboard preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">03</span><h3>Analytics Dashboard</h3></div>
+                        <h3>Analytics Dashboard</h3>
                         <p>An interactive dashboard for data visualization with real-time updates and customizable charts.</p>
                         <div class="project-tech"><span>Vue.js</span><span>CSS</span><span>Python</span><span>API</span></div>
                     </div>
@@ -111,7 +122,7 @@
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/restaurant.svg" alt="Restaurant Website preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">04</span><h3>Restaurant Website</h3></div>
+                        <h3>Restaurant Website</h3>
                         <p>A beautiful restaurant website with menu display, online reservations, and location map.</p>
                         <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span></div>
                     </div>
@@ -119,7 +130,7 @@
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/tasks.svg" alt="Task Management App preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">05</span><h3>Task Management App</h3></div>
+                        <h3>Task Management App</h3>
                         <p>A productivity app for managing tasks with drag-and-drop, deadlines, and team collaboration.</p>
                         <div class="project-tech"><span>React</span><span>CSS</span><span>Firebase</span><span>API</span></div>
                     </div>
@@ -127,7 +138,7 @@
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/business.svg" alt="Business Portfolio preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">06</span><h3>Business Portfolio</h3></div>
+                        <h3>Business Portfolio</h3>
                         <p>A professional portfolio website for a consulting firm with services, testimonials, and contact form.</p>
                         <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>EmailJS</span></div>
                     </div>
@@ -135,7 +146,7 @@
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/rag.svg" alt="RAG Automation with n8n preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">07</span><h3>RAG Automation with n8n</h3></div>
+                        <h3>RAG Automation with n8n</h3>
                         <p>An intelligent automation system using Retrieval-Augmented Generation (RAG) integrated with n8n workflows for enhanced AI-powered business process automation.</p>
                         <div class="project-tech"><span>n8n</span><span>RAG</span><span>AI</span><span>Automation</span></div>
                     </div>
@@ -143,7 +154,7 @@
                 <article class="project-card">
                     <div class="project-image"><img class="project-shot" src="projects/charity.svg" alt="Charity Website preview" loading="lazy" width="640" height="400"></div>
                     <div class="project-content">
-                        <div class="project-top"><span class="idx">08</span><h3>Charity Website</h3></div>
+                        <h3>Charity Website</h3>
                         <p>A beautiful and functional charity website with donation system, volunteer registration, event management, and impact stories to help organizations make a difference.</p>
                         <div class="project-tech"><span>WordPress</span><span>PHP</span><span>CSS</span><span>JavaScript</span></div>
                     </div>
@@ -154,7 +165,7 @@
 
     <section id="pricing" class="pricing">
         <div class="container">
-            <header class="sec-head"><span class="idx">04</span><h2 class="section-title">Pricing &amp; Tariffs</h2></header>
+            <header class="sec-head"><span class="pill">Pricing</span><h2 class="section-title">Pricing &amp; Tariffs</h2></header>
             <p class="pricing-intro">Clear starting prices for every service. All prices are in Moroccan Dirhams (MAD).</p>
             <div class="price-list">
                 <div class="pricing-tier">
@@ -195,7 +206,7 @@
                 <div class="pricing-tier custom-card">
                     <h3>Custom Request?</h3>
                     <p>Bigger scope or something specific? Every custom request gets a custom price.</p>
-                    <a href="#contact" class="btn btn-primary">Get a quote</a>
+                    <a href="#contact" class="btn btn-light">Get a quote</a>
                 </div>
             </div>
             <div class="custom-services">
@@ -214,27 +225,29 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <header class="sec-head"><span class="idx">05</span><h2 class="section-title">Get In Touch</h2></header>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-                    <div class="contact-details">
-                        <a class="contact-mail" href="mailto:tachfineelfarouki76@gmail.com">tachfineelfarouki76@gmail.com</a>
-                        <span class="contact-item">Morocco</span>
+            <div class="contact-panel">
+                <header class="sec-head"><span class="pill">Contact</span><h2 class="section-title">Get In Touch</h2></header>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Let's work together!</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+                        <div class="contact-details">
+                            <a class="contact-mail" href="mailto:tachfineelfarouki76@gmail.com">tachfineelfarouki76@gmail.com</a>
+                            <span class="contact-item">Morocco</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/Holy-C-afk" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/tachfine-el-farouki-0b4b4a219/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/Holy-C-afk" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/tachfine-el-farouki-0b4b4a219/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                    <form class="contact-form">
+                        <div class="form-group"><input type="text" placeholder="Your Name" aria-label="Your Name" required></div>
+                        <div class="form-group"><input type="email" placeholder="Your Email" aria-label="Your Email" required></div>
+                        <div class="form-group"><input type="text" placeholder="Subject" aria-label="Subject" required></div>
+                        <div class="form-group"><textarea rows="4" placeholder="Your Message" aria-label="Your Message" required></textarea></div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group"><input type="text" placeholder="Your Name" aria-label="Your Name" required></div>
-                    <div class="form-group"><input type="email" placeholder="Your Email" aria-label="Your Email" required></div>
-                    <div class="form-group"><input type="text" placeholder="Subject" aria-label="Subject" required></div>
-                    <div class="form-group"><textarea rows="4" placeholder="Your Message" aria-label="Your Message" required></textarea></div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>

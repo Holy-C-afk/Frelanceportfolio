@@ -38,7 +38,7 @@ onScroll();
 // ---------- Scroll reveal ----------
 const revealTargets = document.querySelectorAll(
     '.hero-content > *, .hero-image, .sec-head, .about-text > p, .stat-item, .skill-card, .project-card, ' +
-    '.pricing-intro, .pricing-tier, .custom-title, .custom-chip, .contact-info, .contact-form'
+    '.pricing-intro, .pricing-tier, .custom-title, .custom-chip, .contact-panel'
 );
 const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -52,6 +52,17 @@ revealTargets.forEach((el) => {
     el.classList.add('reveal');
     io.observe(el);
 });
+
+// ---------- Hero parallax (chips + blobs drift with the pointer) ----------
+const visual = document.querySelector(".hero-visual");
+if (visual && !reduceMotion && matchMedia("(hover: hover)").matches) {
+    const layers = [...visual.querySelectorAll(".chip, .blob")].map((el, i) => ({ el, k: (i % 3 + 1) * 7 }));
+    window.addEventListener("pointermove", (e) => {
+        const x = e.clientX / innerWidth - 0.5;
+        const y = e.clientY / innerHeight - 0.5;
+        layers.forEach(({ el, k }) => { el.style.translate = `${x * k * 2}px ${y * k * 2}px`; });
+    }, { passive: true });
+}
 
 // ---------- Count-up stats ----------
 const countIO = new IntersectionObserver((entries) => {
