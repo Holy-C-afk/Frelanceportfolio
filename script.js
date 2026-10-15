@@ -64,6 +64,55 @@ if (visual && !reduceMotion && matchMedia("(hover: hover)").matches) {
     }, { passive: true });
 }
 
+// ---------- Cursor light + card spotlight + 3D tilt ----------
+const canHover = matchMedia("(hover: hover)").matches && !reduceMotion;
+if (canHover) {
+    const glow = document.querySelector(".cursor-glow");
+    window.addEventListener("pointermove", (e) => {
+        glow.style.opacity = "1";
+        glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    }, { passive: true });
+    document.addEventListener("pointerleave", () => { glow.style.opacity = "0"; });
+
+    document.querySelectorAll(".skill-card, .project-card, .pricing-tier, .stat-item").forEach((card) => {
+        card.addEventListener("pointermove", (e) => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+            card.style.setProperty("--my", `${e.clientY - r.top}px`);
+        });
+    });
+
+    document.querySelectorAll(".project-card, .pricing-tier").forEach((card) => {
+        card.addEventListener("pointermove", (e) => {
+            const r = card.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5;
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            card.style.transition = "opacity .7s, box-shadow .4s, background .3s";
+            card.style.transform = `perspective(900px) rotateX(${-y * 7}deg) rotateY(${x * 9}deg) translateY(-8px)`;
+        });
+        card.addEventListener("pointerleave", () => { card.style.transition = ""; card.style.transform = ""; });
+    });
+}
+
+// ---------- Typed role line ----------
+const typed = document.getElementById("typed");
+if (typed && !reduceMotion) {
+    let r = 0, i = 0, deleting = false;
+    window.addEventListener("langchange", () => { r = 0; i = 0; deleting = false; });
+    const step = () => {
+        const roles = window.__roles || ["Freelance Engineer"];
+        const word = roles[r % roles.length];
+        typed.textContent = word.slice(0, i);
+        let delay = deleting ? 35 : 85;
+        if (!deleting && i >= word.length) { deleting = true; delay = 1800; }
+        else if (deleting && i <= 0) { deleting = false; r = (r + 1) % roles.length; delay = 350; }
+        i += deleting ? -1 : 1;
+        setTimeout(step, delay);
+    };
+    typed.textContent = "";
+    step();
+}
+
 // ---------- Count-up stats ----------
 const countIO = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

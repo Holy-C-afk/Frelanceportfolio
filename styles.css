@@ -283,3 +283,60 @@ html[dir="rtl"] .price-amount, html[dir="rtl"] .stat-item h3, html[dir="rtl"] .n
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
     .glass, .stat-item, .skill-card, .project-card, .pricing-tier:not(.custom-card), .custom-chip, .contact-panel, .hero-eyebrow, .chip, .marquee, .navbar .container { background: rgba(255, 255, 255, .9); }
 }
+
+/* ==========================================================
+   Motion layer — cursor light, spotlight, tilt, typed line, ring
+   ========================================================== */
+.cursor-glow {
+    position: fixed; top: 0; left: 0; width: 520px; height: 520px; margin: -260px 0 0 -260px; z-index: -1;
+    background: radial-gradient(circle, rgba(59, 143, 224, .22), rgba(42, 168, 170, .1) 40%, transparent 68%);
+    pointer-events: none; opacity: 0; transition: opacity .4s; will-change: transform;
+}
+
+/* typed role line */
+.caret { display: inline-block; width: 2px; height: 1.05em; margin-inline-start: 4px; vertical-align: -.15em; background: var(--accent); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.hero-subtitle { min-width: 190px; }
+
+/* shimmering name */
+.highlight {
+    background: linear-gradient(110deg, #2f7fd0, #26a6a4, #6a8cf0, #2f7fd0); background-size: 250% 100%;
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    animation: shimmer 6s linear infinite;
+}
+@keyframes shimmer { to { background-position: -250% 0; } }
+
+/* rotating light ring around the portrait */
+.hero-image::before {
+    content: ''; position: absolute; inset: -6px; border-radius: 46px; z-index: -1;
+    background: conic-gradient(from 0deg, #3b8fe0, #2aa8aa, #9db4f5, transparent 55%, #3b8fe0);
+    animation: spin 7s linear infinite; filter: blur(.5px);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.hero-image { overflow: visible; }
+
+/* button light sweep */
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after {
+    content: ''; position: absolute; inset: 0; transform: translateX(-130%);
+    background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .5) 50%, transparent 70%);
+    transition: transform .8s var(--ease);
+}
+.btn-primary:hover::after { transform: translateX(130%); }
+
+/* spotlight that follows the pointer inside cards */
+.project-card, .pricing-tier, .stat-item { position: relative; }
+.skill-card::after, .project-card::after, .pricing-tier::after, .stat-item::after {
+    content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .35s;
+    background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .85), rgba(120, 190, 235, .18) 45%, transparent 70%);
+}
+.skill-card:hover::after, .project-card:hover::after, .pricing-tier:hover::after, .stat-item:hover::after { opacity: 1; }
+.pricing-tier.custom-card::after { background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .3), transparent 65%); }
+
+/* scroll hint */
+.hero { position: relative; }
+.scroll-hint { position: absolute; bottom: 8px; left: 50%; width: 26px; height: 42px; margin-left: -13px; border: 2px solid rgba(16, 36, 58, .3); border-radius: 14px; }
+.scroll-hint span { position: absolute; top: 7px; left: 50%; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--accent); animation: wheel 1.8s infinite; }
+@keyframes wheel { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
+@media (max-width: 900px) { .scroll-hint { display: none; } }
+@media (hover: none) { .cursor-glow { display: none; } }
