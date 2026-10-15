@@ -28,7 +28,7 @@ const AR = {
     'Available for new projects': 'متاح لمشاريع جديدة',
     "Hi, I'm": 'مرحباً، أنا',
     'Freelance Engineer': 'مهندس مستقل',
-    'I create innovative solutions and technical systems that help businesses grow and automate their processes.': 'أبتكر حلولاً وأنظمة تقنية تساعد الشركات على النمو وأتمتة عملياتها.',
+    'I create innovative solutions and technical systems that help businesses grow and automate their processes.': 'أصمّم وأطوّر حلولاً تقنية وأنظمة ذكية تساعد الشركات على النمو وأتمتة أعمالها.',
     'View My Work': 'شاهد أعمالي', 'Get In Touch': 'تواصل معي',
     'About Me': 'نبذة عني',
     "I'm a passionate freelance engineer with years of experience creating innovative technical solutions. I help clients bring their ideas to life through clean code, automation, and efficient system design.": 'أنا مهندس مستقل شغوف بخبرة سنوات في ابتكار الحلول التقنية. أساعد العملاء على تحويل أفكارهم إلى واقع عبر كود نظيف وأتمتة وتصميم أنظمة فعّال.',
